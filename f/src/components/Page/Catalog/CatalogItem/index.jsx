@@ -75,6 +75,17 @@ const CatalogItemPage = props => {
 
   const history = useHistory()
   useEffect(() => {
+    if (location.pathname.endsWith("healthcare-it") || location.pathname.endsWith("healthcare-it/")) {
+      let newUrl = location.pathname
+      if (newUrl.endsWith("/")) {
+        newUrl = newUrl.slice(0, -1);
+      }
+      history.push(`${newUrl}/index/`)
+      dispatch(fetchCatalogItem('healthcare-it/index', region, lang))
+    }
+  })
+
+  useEffect(() => {
     if (location.pathname.endsWith("angiography") || location.pathname.endsWith("angiography/")) {
       let newUrl = location.pathname
       if (newUrl.endsWith("/")) {
