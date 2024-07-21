@@ -96,8 +96,17 @@ const CatalogItemPage = props => {
     }
   })
 
+  // eslint-disable-next-line max-len
+  const fixedHeader = [
+      'angiography',
+    'computed-tomography',
+    'magnitno-rezonansnaya-tomografiya',
+    'x-ray-diagnostics',
+    'ultrasound-diagnostics',
+    'healthcare-it/index']
+
   useEffect(() => {
-    if (window.location.pathname.includes("angiography")) {
+    if (fixedHeader.some(header => window.location.pathname.includes(header))) {
       setSticky({ position: "sticky", zIndex: "1", top: "-1px", background: "white"});
     } else {
       setSticky({});
