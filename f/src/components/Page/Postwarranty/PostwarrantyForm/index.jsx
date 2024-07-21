@@ -266,7 +266,7 @@ const Warranty = props => {
         return feedbackFormInputs.length ? (
             <div className="feedback-form-container --warranty">
                 <h3>
-                    {lang === 'ru' ? 'Оставить заявку на постгарантийный сервис' : 'Post-warranty service'}
+                    {lang === 'ru' ? 'Заявка на постгарантийный ремонт' : 'Post-warranty service'}
                 </h3>
                 <form data-form-id={feedbackForm.ID} onSubmit={handleSubmit}
                     className="flex feedback-form" id="feedback-form" action="/" method="post">

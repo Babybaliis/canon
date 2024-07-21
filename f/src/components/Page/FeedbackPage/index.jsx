@@ -47,7 +47,7 @@ const FeedbackPage = () => {
             />
           </p>
 
-          <FeedbackForm title={'Оставить заявку на сервис'} />
+          <FeedbackForm title={'Заявка на сервис по гарантии'} />
         </div>
       </div>
     </div>
